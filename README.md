@@ -22,14 +22,33 @@
 ## 3. 가격예측 모델링
 이번 프로젝트에서는 LSTM과 GRU모델을 사용하였습니다. 성능(RMSE)와 패턴을 얼마나 잘 따라가는 지를 비교한 결과 최종적으로 LSTM모델이 선정되었습니다. 또한 파생변수와 변수선택의 유의성과 모델성능을 비교검증 하기 위해서 3가지의 케이스(none,시장,all) 로 비교하였습니다. 각 케이스별로 선택된 변수는 아래와 같습니다.
 
-|        |  HYBE  | 
-| :----- | :-----: |
+| case | 변수명 |
+| :----- | :----- |
 | `NONE` | 광물가격변수, 종합광물지수, 메이저/희유금속 지수 | 
 | `시장` | 광물가격변수, 종합광물지수, 메이저/희유금속 지수 | 
 | `ALL` | 광물가격변수, 종합광물지수, 메이저/희유금속 지수, 환율(USD,RMD), 2차전지산업지수, 무역수지 | 
 
 
 ## 3.1. 예측 그래프
+이번 프로젝트에서 최종 모델로 선정된 LSTM의 시계열 예측 그래프이다. 파란색은 실제 값을 의미하고 주황색은 예측된 값을 의미한다. 1년간의 시계열그래프를 그렸고 예측에 사용된 test 일자는 2024-04-23 ~ 2024-04-30 이다. 이번 프로젝트에서 사용된 파생변수 및 새로운 변수가 유의미함을 직관적으로 확인 할 수 있다. 
+
+| 니켈 none | 니켈 all |
+| :-----: | :-----: |
+![LSTM 니켈none](https://github.com/dongwan97/BI_competition/assets/122766043/a65052ac-940b-4790-9c3e-ed99896a1fd7) | ![LSTM 니켈all](https://github.com/dongwan97/BI_competition/assets/122766043/c0e8fbb7-61cc-4a6a-89ef-eb11ba4b3ee5) 
+
+| 리튬 none | 리튬 all |
+| :-----: | :-----: |
+![LSTM 리튬none](https://github.com/dongwan97/BI_competition/assets/122766043/07eed9a5-9b2f-4eed-91ae-0d08fa223f00) | ![LSTM 리튬all](https://github.com/dongwan97/BI_competition/assets/122766043/67e435cd-9a1d-4058-9ab5-b994b624806c) 
+
+| 코발트 none | 코발트 all |
+| :-----: | :-----: |
+![LSTM 코발트none](https://github.com/dongwan97/BI_competition/assets/122766043/69e85f61-d8b5-477b-8dff-1378b5e40895) | ![LSTM 코발트all](https://github.com/dongwan97/BI_competition/assets/122766043/f23bc74a-4a89-43f3-90c9-6a54a0bfeb41)
+--- | --- |
+
+| 망간 none | 망간 all |
+| :-----: | :-----: |
+![LSTM 망간none](https://github.com/dongwan97/BI_competition/assets/122766043/9ce7b8be-e1f5-43e8-946e-505c6fcf5b2c) | ![LSTM 망간](https://github.com/dongwan97/BI_competition/assets/122766043/86e42256-5ffc-4eef-b2dc-e7b37d3dd764)
+
 
 ## 3.2. 성능 평가
 RMSE (Root Mean Square Error)는 원래 데이터와 예측 데이터 사이의 차이의 제곱을 측정한 후, 제곱근을 취한 값이므로 원래 데이터의 단위와 동일한 단위를 가지기 때문에 해석이 용이하다는 장점을 가지고 있습니다. 이러한 이유로 RMSE로 성능을 평가하였습니다.
