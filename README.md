@@ -2,7 +2,8 @@
 <br>
 
 ## MICO[Mineral Commentor] - AI 광물 리스크 탐지 레포트 서비스 
-![시연영상](https://github.com/dongwan97/BI_competition/assets/122766043/b865aadd-3df2-45f5-a1c8-4816f2d320b6)
+![시연3](https://github.com/dongwan97/BI_competition/assets/122766043/eb5089ed-386d-47db-8bf0-fa7788393cd8)
+
 
 ## 1. 🏃🏻‍♂️ 팀 소개
 <p> 코발트 </p>
